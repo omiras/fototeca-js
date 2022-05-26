@@ -1,0 +1,25 @@
+#lightbox {
+    display: none;
+}
+
+#galeria {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.imagen-galeria {
+    position: relative;
+
+}
+
+.imagen-galeria > img:first-child {
+    height: 200px;
+}
+
+.aspa-eliminar{
+    width: 30px;
+    position: absolute;
+    top: 5px;
+    right: 5px;
+}
