@@ -52,7 +52,12 @@ function llenarGaleria() {
 
         let aspaQuitarFoto = document.createElement("img");
         aspaQuitarFoto.src = "/img/borrar.png";
-        aspaQuitarFoto.classList.add("aspa-eliminar")
+        aspaQuitarFoto.classList.add("aspa-eliminar");
+
+        aspaQuitarFoto.addEventListener("click", function (event) {
+            // Acceso a la imagen asociada al aspa que acabamos de clicar
+            console.log(event.target.previousSibling);
+        })
 
         // en el DIV , pon la imagen
         contenedorImagen.appendChild(imagen);
