@@ -57,8 +57,19 @@ function llenarGaleria() {
 
         aspaQuitarFoto.addEventListener("click", function (event) {
             // Acceso a la imagen asociada al aspa que acabamos de clicar
-            console.log("Foto clicada");
-            console.log(event.target.id);
+
+            // 1. Guardar en una variable el id de la foto clicada
+            let srcFoto = event.target.id;
+
+            // 2. Buscar en el array galeria dicha foto y eliminarla. Actualizar el estado de la app
+            let posImagenGaleria = galeria.indexOf(srcFoto);
+
+            // posImagenGaleria es el primer argumento que le tenemos que pasar al método splice, pues es la posición en la que se encuentra el elemento que queremos eliminar
+            galeria.splice(posImagenGaleria, 1);
+
+
+            // 3. Actualizar la itnerfaz del usuario para plasmar los cambios del estado de la app
+            llenarGaleria();
         })
 
         // en el DIV , pon la imagen
